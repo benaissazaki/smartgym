@@ -1,0 +1,16 @@
+{
+  "name": "landing-page-template",
+  "version": "1.0.0",
+  "description": "Template for landing pages",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sass assets/stylesheets/source:assets/stylesheets/build",
+    "watch": "sass --watch assets/stylesheets/source/:assets/stylesheets/build"
+  },
+  "author": "Zaki Benaissa",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.38.0"
+  }
+}

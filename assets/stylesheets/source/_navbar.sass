@@ -1,0 +1,109 @@
+// WRAPPER
+$x-padding: 10px
+$background: white
+
+// CONTAINER
+$cx-padding: 30px
+$height: 120px
+
+// LOGO
+$logo-width: 120px
+
+// LINKS
+$link-color: #000
+$link-color-hover: blue
+
+// HAMBURGER
+$hamburger-color: #7c7979
+$hamburger-color-hover: black
+
+// OTHER
+$nav-breakpoint: 768px
+
+.nav-wrapper
+    position: fixed
+    left: 0%
+    top: 0%
+    right: 0%
+    bottom: auto
+    padding: 0 $x-padding
+    background: $background
+    z-index: 50
+    border-bottom: 1px solid #E2E8F0
+
+.nav-container
+    height: $height
+    margin: 0 auto
+    padding: 0 $cx-padding
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .nav-logo
+        width: $logo-width
+
+    .nav-menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        li
+            margin-left: 70px
+
+        a
+            color: $link-color
+            text-decoration: none
+
+        a:hover
+            color: $link-color-hover
+
+    .hamburger
+        cursor: pointer
+        display: none
+        background-color: transparent
+        border: none
+
+    .hamburger:hover .bar
+        background-color: $hamburger-color-hover
+
+    .bar
+        display: block
+        width: 25px
+        height: 3px
+        margin: 5px auto
+        -webkit-transition: all 0.3s ease-in-out
+        transition: all 0.3s ease-in-out
+        background-color: $hamburger-color
+
+@media only screen and (max-width: $nav-breakpoint)
+    .hamburger
+        display: block !important
+
+    .hamburger:focus
+        border: solid 1px blue
+    .nav-menu
+        position: fixed
+        left: -100%
+        top: $height
+        flex-direction: column
+        background-color: #fff
+        width: 100%
+        text-align: center
+        transition: 0.3s
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05)
+        z-index: 9999
+
+        li
+            margin: 25px 0 !important
+
+    .nav-menu.active
+        left: 0
+
+    .hamburger.active .bar:nth-child(2)
+        opacity: 0
+
+    .hamburger.active .bar:nth-child(1)
+        transform: translateY(8px) rotate(45deg)
+
+    .hamburger.active .bar:nth-child(3)
+        transform: translateY(-8px) rotate(-45deg)

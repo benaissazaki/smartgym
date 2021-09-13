@@ -1,0 +1,32 @@
+@use 'navbar'
+@use 'hero'
+@use 'section'
+
+$container-max-width: 1160px
+
+*
+    box-sizing: border-box
+
+body
+    margin: 0
+
+.nav-container, .hero-container, .container
+    max-width: $container-max-width
+    width: 100%
+    margin: 0 auto
+
+// RESET
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-family: 'Roboto', sans-serif
+
+li
+    list-style: none
+
+a
+    text-decoration: none

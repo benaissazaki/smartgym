@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO: Provide title</title>
+    <meta name="description" content="TODO: Description">
+    <meta name="keywords" content="TODO: Provide keywords">
+    <link rel="stylesheet" href="./assets/stylesheets/build/index.css">
+</head>
+
+<body>
+    <header>
+        <nav role="navigation" class="nav-wrapper">
+            <!-- TODO: Background, position -->
+            <div class="nav-container">
+                <!-- TODO: Display, width, margin, padding -->
+                <img src="" alt="Logo" class="nav-logo" />
+                <ul class="nav-menu" id="menu">
+                    <li>
+                        <a href="#">
+                            Link 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Link 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Link 1
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="hamburger" aria-expanded="false" aria-controls="menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+            <!-- TODO: Background, x-padding -->
+            <div class="hero-wrapper">
+                <!-- TODO: Height, y-padding -->
+                <div class="hero-container">
+                    <!-- TODO: Display -->
+                    <div class="hero-content">
+
+                    </div>
+                    <div class="hero-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <!-- TODO: Padding, Background -->
+            <div class="container">
+                <!-- TODO: Width, Margin -->
+
+            </div>
+        </section>
+    </main>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+
+            if(navMenu.classList.contains("active")) {
+                hamburger.setAttribute("aria-expanded", "true");
+            } else {
+                hamburger.setAttribute("aria-expanded", "false");
+            }
+        }
+
+
+        const navLink = document.querySelectorAll(".nav-menu a");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+
+            if(navMenu.classList.contains("active")) {
+                hamburger.setAttribute("aria-expanded", "true");
+            } else {
+                hamburger.setAttribute("aria-expanded", "false");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
