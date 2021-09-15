@@ -5,10 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
 
+@import 'fonts'
+@import 'colors'
+
 $container-max-width: 1160px
 
 *
     box-sizing: border-box
+    font-family: $font-secondary
+
+h1, h2, h3, h4, h5, h6
+    font-family: $font-primary
 
 body
     margin: 0
@@ -33,3 +40,20 @@ li
 
 a
     text-decoration: none
+
+button
+    padding: 14px 24px
+    text-transform: uppercase
+    cursor: pointer
+    font-family: $font-primary
+    font-weight: 600
+
+button.btn-secondary
+    background-color: $color-contrast
+    border: none
+    color: white
+    font-size: 18px
+    transition: background-color 0.2s
+
+button.btn-secondary:hover
+    background-color: #ce9e56
