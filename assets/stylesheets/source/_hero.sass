@@ -1,5 +1,8 @@
+@import 'colors'
+@import 'navbar'
+
 // SECTION
-$background: wheat
+$background: linear-gradient(rgba(0, 171, 231, 0.8), rgba(0, 171, 231, 0.8)), url('../../img/hero.webp')
 $x-padding: 10px
 
 // WRAPPER
@@ -9,10 +12,23 @@ $y-padding: 120px
 .hero-section 
     background: $background
     padding: 0 $x-padding
+    margin-top: $height
 
 .hero-wrapper
-    min-height: $min-height
+    height: calc(#{$min-height} - #{$height})
     padding: $y-padding 0
     display: flex
     justify-content: center
     align-items: center
+
+.hero-content
+    color: white
+    h1
+        text-transform: uppercase
+        font-size: 3.6em
+    
+    p
+        font-size: 1.2em
+        margin: 30px 0
+        max-width: 620px
+        text-align: justify
