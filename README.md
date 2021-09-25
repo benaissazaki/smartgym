@@ -26,6 +26,7 @@ associated with services in the medical industry, like doctors, and can increase
 - I didn't use any UI library for higher customizability and better learning
 - I used SASS instead of CSS to have a better organized code
 - I used Git and Github to track changes
+- I converted all images to WebP for size optimization
 
 ## Ways to improve
 - Make a figma wireframe before the implementation
